@@ -16,7 +16,7 @@ namespace ConsoleBankApp
             var accountId = string.Empty;
 
 
-            Console.WriteLine("Welcome to Pegasus Bank!");
+            Console.WriteLine("Welcome to Console Bank!");
             Console.WriteLine("Press 1 to login or 2 to Register ");
             var x = Console.ReadLine();
             if (x != null)
