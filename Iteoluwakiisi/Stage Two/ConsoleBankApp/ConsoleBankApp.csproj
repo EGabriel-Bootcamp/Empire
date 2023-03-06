@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleBankApp.Domain\ConsoleBankApp.Domain.csproj" />
+    <ProjectReference Include="..\ConsoleBankApp.Infrastructure\ConsoleBankApp.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
