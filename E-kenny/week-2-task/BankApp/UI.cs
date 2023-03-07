@@ -131,9 +131,10 @@ namespace BankApp.Api
                                             switchLoop = false;
                                         break;
                                 case "4":
-                                        Console.Write($"Balance is:  ");
+                                        Console.Write($"=> Balance is:  ");
                                         var bal = await Di._transactionService.Balance(accountId);
                                         Console.WriteLine(bal);
+                                        Console.WriteLine($"");
                                         switchLoop = false;
                                         break;
                                 case "5":
