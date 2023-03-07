@@ -10,5 +10,10 @@ namespace ConsoleBankApp.Domain.Interfaces.IServices
     public interface ITransactionService
     {
         public Task<bool> Transaction(Transaction transaction);
+        public Task<List<Transaction>> UserTransactions(string accountid);
+        public Task<decimal> Balance(string accountid);
+
+        public Task<string> Summary(string accountid);
+
     }
 }

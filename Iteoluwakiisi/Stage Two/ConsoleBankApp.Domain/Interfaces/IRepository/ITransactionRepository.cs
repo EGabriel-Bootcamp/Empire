@@ -10,5 +10,10 @@ namespace ConsoleBankApp.Domain.Interfaces.IRepository
     public interface ITransactionRepository
     {
         public Task<bool> Transaction(Transaction transaction);
+
+        public Task<List<Transaction>> UserTransactions(string accountid);
+
+
+        // public Task<List<Transaction>> TransactionList(List<Transaction> transactionList);
     }
 }

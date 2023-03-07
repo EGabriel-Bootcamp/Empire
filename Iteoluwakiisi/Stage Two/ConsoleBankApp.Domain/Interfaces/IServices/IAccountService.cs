@@ -12,5 +12,7 @@ namespace ConsoleBankApp.Domain.Interfaces.IServices
         public Task<Account> Create(Account account);
         public Task<bool> Withdraw(decimal amount, string description, string accountid);
         public Task<bool> Deposit(decimal amount, string description, string accountid);
+        public Task<Account> GetAccount(string id);
+
     }
 }
