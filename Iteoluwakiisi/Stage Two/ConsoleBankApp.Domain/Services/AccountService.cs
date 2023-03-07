@@ -51,5 +51,12 @@ namespace ConsoleBankApp.Domain.Services
 
             return result;
         }
+
+        public async Task<Account> GetAccount(string id)
+        {
+            var result = await _accountRepository.GetAccount(id);
+
+            return result;
+        }
     }
 }
