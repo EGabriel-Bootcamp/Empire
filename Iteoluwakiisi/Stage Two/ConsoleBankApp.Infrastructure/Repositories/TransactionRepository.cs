@@ -52,5 +52,33 @@ namespace ConsoleBankApp.Infrastructure.Repositories
             return false;
 
         }
+        public async Task<List<Transaction>> UserTransactions(string accountid)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string fileName = "Transaction.json";
+
+
+            if (File.Exists(fileName))
+            {
+                var jsonString = File.ReadAllText(fileName);
+                if (jsonString == "" || jsonString == " ")
+                {
+                    return null;
+                }
+
+                var accounts = JsonSerializer.Deserialize<List<Transaction>>(jsonString);
+
+                if (accounts != null)
+                {
+                    return accounts.Where(x => x.AccountId == accountid).ToList();
+                }
+
+            }
+            else
+            {
+                return null;
+            }
+            return null;
+        }
     }
 }

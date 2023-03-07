@@ -3,6 +3,7 @@ using ConsoleBankApp.Domain.Interfaces.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -95,7 +96,9 @@ namespace ConsoleBankApp.Infrastructure.Repositories
                 return user;
 
             }
-        }
+            return null;
+        } 
+
     }
 }
 
